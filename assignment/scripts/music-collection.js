@@ -7,7 +7,7 @@ let collection = [];
 function addToCollection(title, artist, yearPublished) {
   let album = {
     title: title,
-    artist : artist,
+    artist: artist,
     yearPublished: yearPublished
   }
   collection.push(album);
@@ -20,3 +20,16 @@ console.log(addToCollection('Evil Seeds Grow Naturally', 'Freddie Gibbs', 2013))
 console.log(addToCollection('The Blue Print', 'Jay-Z', 2001));
 console.log(addToCollection('A State of Trance 500', 'GAIA', 2011));
 console.log(addToCollection('We Are The Streets', 'The LOX', 2000));
+
+//Logging the collection array
+console.log(collection);
+
+//Adding a function of showCollection
+function showCollection(arrayItem) {
+  console.log(arrayItem.length);
+  for (let i of arrayItem) {
+  console.log(`${i.title} by ${i.artist}, published in ${i.yearPublished}`);//Don't forget to use the (in this case you used i) for the log
+  }
+}
+//Testing the showCollection
+showCollection(collection);
