@@ -33,3 +33,19 @@ function showCollection(arrayItem) {
 }
 //Testing the showCollection
 showCollection(collection);
+
+//Adding function for findByArtist (this is a for if loop)
+function findByArtist(arrayArtist) {
+  let artistFind = [];
+  for (let find of collection) {
+    if (arrayArtist === find.artist) {
+      artistFind.push(find);//you are pushing this to the let
+    }
+  }
+  return artistFind; //outside of the for
+}
+
+//Testing the findByArtist
+console.log(findByArtist('GAIA'));
+console.log(findByArtist('Nas'));
+console.log(findByArtist('Jay-Z'));
